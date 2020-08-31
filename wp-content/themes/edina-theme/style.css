@@ -263,10 +263,6 @@ html {
 	box-sizing: border-box;
 }
 
-body {
-	background: #fff;
-}
-
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -396,31 +392,10 @@ textarea {
 	width: 100%;
 }
 
-a {
-	color: #4169e1;
-}
-
-a:visited {
-	color: #800080;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: #191970;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
-
 .main-navigation {
-	display: block;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	width: 100%;
 }
 
@@ -704,6 +679,62 @@ object {
 	display: block;
 }
 
+@font-face {
+	font-family: Dosis-Regular;
+	src: url("assets/Dosis-Regular.ttf");
+}
+
+@font-face {
+	font-family: ArchitectsDaughter;
+	src: url("assets/ArchitectsDaughter-Regular.ttf");
+}
+
+body {
+	height: 3000px;
+	background-color: #cac8c691;
+}
+
 .site-header {
-	background-color: red;
+	height: 17vh;
+	display: flex;
+	align-content: center;
+	background-image: url(assets/header-image.jpg);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-position-y: 50%;
+	box-shadow: inset 0 20px 110px 25px black, 0 0 15px black;;
+}
+
+.site-title {
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.site-title > a {
+	text-decoration: none;
+	color: #ffffffbf;
+	font-family: 'ArchitectsDaughter', Arial, serif;
+	font-size: 2rem;
+}
+
+.page_item > a {
+	text-decoration: none;
+	color: #ffffffbf;
+	font-family: 'Dosis-Regular', Arial, serif;
+	font-size: 1.5rem;
+	margin-right: 1.5rem;
+	/*transform: scale(1);*/
+	transition: transform 0.1s;
+}
+
+.page_item > a:hover {
+	transform: translateY(-5px);
+	transition: transform 0.1s;
+}
+
+.site-main {
+	margin-top: 17vh;
+	padding: 1vh 0
 }

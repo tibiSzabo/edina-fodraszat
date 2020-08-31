@@ -1,6 +1,8 @@
 
 # BEGIN WordPress
-# A `BEGIN WordPress` és az `END WordPress` sorok közötti tartalom dinamikusan generált, és csak WordPress szűrők módosíthatják. Bárminemű kézi módosítás e kettő sor között el fog veszni.
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /kosztely-edina-fodraszat/
